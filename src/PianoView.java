@@ -3,8 +3,10 @@ import java.awt.*;
 
 public class PianoView extends JFrame {
     private PianoController pianoController;
-    // Octave chooser
-    private JSlider octavePickingSlider;
+    // Octave chooser and label
+    protected JLabel octavePickingLabel;
+    protected JSlider octavePickingSlider;
+    // Octave 0 (A0 and B0)
     // Octave 1 (<note name><octave number>Key)
     // White keys
     protected JButton c1Key;
@@ -27,8 +29,7 @@ public class PianoView extends JFrame {
     // Octave 5
     // Octave 6
     // Octave 7
-    protected JButton cKey;
-    protected JButton dKey;
+    // Octave 8 (C8)
 
     public PianoView(PianoController pianoController) {
         super("JPiano");
@@ -44,32 +45,49 @@ public class PianoView extends JFrame {
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
 
-        /*JPanel sliderPanel = new JPanel();
-        octavePickingSlider = new JSlider();
+        JPanel sliderPanel = new JPanel();
+        // Start in the middle of the piano (octave 4)
+        // Highest octave is 8 (only has C8)
+        // Lowest octave is 0 (only has A0 and B0)
+        octavePickingSlider = new JSlider(JSlider.HORIZONTAL, 0, 8, 4);
+        octavePickingSlider.setMajorTickSpacing(1);
+        octavePickingSlider.setMinorTickSpacing(1);
+        octavePickingSlider.setPaintTicks(true);
+        octavePickingSlider.setPaintLabels(true);
+        // Find source for SwingConstants
+        octavePickingLabel = new JLabel("Octave:   ", SwingConstants.RIGHT);
+        // Find source for label size
+        octavePickingLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        sliderPanel.add(octavePickingLabel);
         sliderPanel.add(octavePickingSlider);
-        contentPanel.add(sliderPanel, BorderLayout.NORTH);*/
+        sliderPanel.setLayout(new GridLayout(1, 2));
 
-        //JPanel pianoKeys = new JPanel();
         JPanel blackPianoKeys = new JPanel();
         blackPianoKeys.setLayout(new GridLayout(1, 5));
+
         JPanel whitePianoKeys = new JPanel();
         whitePianoKeys.setLayout(new GridLayout(1, 8));
 
         // Set background found by playing around with IntelliJ's autocomplete
         c1SharpKey = new JButton("C1#");
         c1SharpKey.setBackground(Color.BLACK);
+        c1SharpKey.setForeground(Color.WHITE);
         blackPianoKeys.add(c1SharpKey);
         d1SharpKey = new JButton("D1#");
         d1SharpKey.setBackground(Color.BLACK);
+        d1SharpKey.setForeground(Color.WHITE);
         blackPianoKeys.add(d1SharpKey);
         f1SharpKey = new JButton("F1#");
         f1SharpKey.setBackground(Color.BLACK);
+        f1SharpKey.setForeground(Color.WHITE);
         blackPianoKeys.add(f1SharpKey);
         g1SharpKey = new JButton("G1#");
         g1SharpKey.setBackground(Color.BLACK);
+        g1SharpKey.setForeground(Color.WHITE);
         blackPianoKeys.add(g1SharpKey);
         a1SharpKey = new JButton("A1#");
         a1SharpKey.setBackground(Color.BLACK);
+        a1SharpKey.setForeground(Color.WHITE);
         blackPianoKeys.add(a1SharpKey);
 
         c1Key = new JButton("C1");
@@ -97,10 +115,9 @@ public class PianoView extends JFrame {
         c2Key.setBackground(Color.WHITE);
         whitePianoKeys.add(c2Key);
 
+        contentPanel.add(sliderPanel);
         contentPanel.add(blackPianoKeys);
         contentPanel.add(whitePianoKeys);
-        //contentPanel.add(pianoKeys, BorderLayout.CENTER);
-        //contentPanel.add(pianoKeys);
         getContentPane().add(contentPanel);
     }
 }
