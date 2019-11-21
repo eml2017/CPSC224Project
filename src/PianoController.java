@@ -24,12 +24,12 @@ public class PianoController {
         this.pianoModel = pianoModel;
         this.pianoView = new PianoView(this);
 
-        pianoView.cKey.addActionListener(new ActionListener() {
+        pianoView.c1Key.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JButton button = (JButton) e.getSource();
                 try {
-                    System.out.println("The C key was pushed");
+                    System.out.println("The C1 key was pushed");
                     InputStream inputStream = getClass().getResourceAsStream("tone.wav");
                     AudioStream audioStream = new AudioStream(inputStream);
                     AudioPlayer.player.start(audioStream);
@@ -39,12 +39,12 @@ public class PianoController {
             }
         });
 
-        pianoView.dKey.addActionListener(new ActionListener() {
+        pianoView.d1Key.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JButton button = (JButton) e.getSource();
                 try {
-                    System.out.println("The D key was pushed");
+                    System.out.println("The D1 key was pushed");
                     InputStream inputStream = getClass().getResourceAsStream("tone.wav");
                     AudioStream audioStream = new AudioStream(inputStream);
                     AudioPlayer.player.start(audioStream);
