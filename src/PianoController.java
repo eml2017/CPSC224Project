@@ -26,7 +26,7 @@ public class PianoController {
         this.pianoModel = pianoModel;
         this.pianoView = new PianoView(this);
 
-        pianoView.c3Key.addActionListener(new ActionListener() {
+        pianoView.cKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -39,7 +39,7 @@ public class PianoController {
             }
         });
 
-        pianoView.d3Key.addActionListener(new ActionListener() {
+        pianoView.dKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -52,7 +52,7 @@ public class PianoController {
             }
         });
 
-        pianoView.e3Key.addActionListener(new ActionListener() {
+        pianoView.eKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -65,7 +65,7 @@ public class PianoController {
             }
         });
 
-        pianoView.f3Key.addActionListener(new ActionListener() {
+        pianoView.fKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -78,7 +78,7 @@ public class PianoController {
             }
         });
 
-        pianoView.g3Key.addActionListener(new ActionListener() {
+        pianoView.gKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -91,7 +91,7 @@ public class PianoController {
             }
         });
 
-        pianoView.a3Key.addActionListener(new ActionListener() {
+        pianoView.aKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -104,7 +104,7 @@ public class PianoController {
             }
         });
 
-        pianoView.b3Key.addActionListener(new ActionListener() {
+        pianoView.bKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -117,7 +117,7 @@ public class PianoController {
             }
         });
 
-        pianoView.c4Key.addActionListener(new ActionListener() {
+        pianoView.cNextOctaveKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -130,7 +130,7 @@ public class PianoController {
             }
         });
 
-        pianoView.c3SharpKey.addActionListener(new ActionListener() {
+        pianoView.cSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -143,7 +143,7 @@ public class PianoController {
             }
         });
 
-        pianoView.d3SharpKey.addActionListener(new ActionListener() {
+        pianoView.dSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -156,7 +156,7 @@ public class PianoController {
             }
         });
 
-        pianoView.f3SharpKey.addActionListener(new ActionListener() {
+        pianoView.fSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -169,7 +169,7 @@ public class PianoController {
             }
         });
 
-        pianoView.g3SharpKey.addActionListener(new ActionListener() {
+        pianoView.gSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -182,7 +182,7 @@ public class PianoController {
             }
         });
 
-        pianoView.a3SharpKey.addActionListener(new ActionListener() {
+        pianoView.aSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {

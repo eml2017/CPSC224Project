@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="07d6e046-71b1-4b25-a3c0-4b23eb98ade6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/tone.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PianoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PianoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tone.wav" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PA6" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
