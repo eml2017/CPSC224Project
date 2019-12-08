@@ -2,9 +2,13 @@ import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 // Sound files downloaded from:
 // https://freesound.org/people/Tesabob2001/packs/12995/
@@ -13,185 +17,150 @@ import java.io.InputStream;
 // https://alvinalexander.com/java/java-audio-example-java-au-play-sound
 
 public class PianoController {
-    private PianoModel pianoModel;
+    public int octave;
     private PianoView pianoView;
+    private PianoOpenHelper openHelper = new PianoOpenHelper();
 
     public static void main (String[] args) {
-        PianoModel pianoModel = new PianoModel();
-        PianoController controller = new PianoController(pianoModel);
+        PianoController controller = new PianoController();
+    }
+
+    public void playSound(int octave, String note, ActionEvent e) {
+        try {
+             InputStream inputStream = getClass().getResourceAsStream(note + octave + ".wav");
+             AudioStream audioStream = new AudioStream(inputStream);
+             AudioPlayer.player.start(audioStream);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void playSharpSound(int octave, String note, ActionEvent e) {
+        try {
+            InputStream inputStream = getClass().getResourceAsStream(note + "#" + octave + ".wav");
+            AudioStream audioStream = new AudioStream(inputStream);
+            AudioPlayer.player.start(audioStream);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     // C3 -> C4 working
-    public PianoController(PianoModel pianoModel) {
-        this.pianoModel = pianoModel;
+    public PianoController() {
+        octave = openHelper.getOctave();
         this.pianoView = new PianoView(this);
+        pianoView.octavePickingSlider.setValue(octave);
+
+        pianoView.octavePickingSlider.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                JSlider source = (JSlider) e.getSource();
+                openHelper.updateOctave(source.getValue());
+                octave = openHelper.getOctave();
+                pianoView.cKey.setText("C" + octave);
+                pianoView.dKey.setText("D" + octave);
+                pianoView.eKey.setText("E" + octave);
+                pianoView.fKey.setText("F" + octave);
+                pianoView.gKey.setText("G" + octave);
+                pianoView.aKey.setText("A" + octave);
+                pianoView.bKey.setText("B" + octave);
+                pianoView.cNextOctaveKey.setText("C" + octave + 1);
+                pianoView.cSharpKey.setText("C#" + octave);
+                pianoView.dSharpKey.setText("D#" + octave);
+                pianoView.fSharpKey.setText("F#" + octave);
+                pianoView.gSharpKey.setText("G#" + octave);
+                pianoView.aSharpKey.setText("A#" + octave);
+            }
+        });
 
         pianoView.cKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("c3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "c", e);
             }
         });
 
         pianoView.dKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("d3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "d", e);
             }
         });
 
         pianoView.eKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("e3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "e", e);
             }
         });
 
         pianoView.fKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("f3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "f", e);
             }
         });
 
         pianoView.gKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("g3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "g", e);
             }
         });
 
         pianoView.aKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("a3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "a", e);
             }
         });
 
         pianoView.bKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("b3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave, "b", e);
             }
         });
 
         pianoView.cNextOctaveKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("c4.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSound(octave + 1, "c", e);
             }
         });
 
         pianoView.cSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("c#3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSharpSound(octave, "c", e);
             }
         });
 
         pianoView.dSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("d#3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSharpSound(octave, "d", e);
             }
         });
 
         pianoView.fSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("f#3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSharpSound(octave, "f", e);
             }
         });
 
         pianoView.gSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("g#3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSharpSound(octave, "g", e);
             }
         });
 
         pianoView.aSharpKey.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    InputStream inputStream = getClass().getResourceAsStream("a#3.wav");
-                    AudioStream audioStream = new AudioStream(inputStream);
-                    AudioPlayer.player.start(audioStream);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+                playSharpSound(octave, "a", e);
             }
         });
     }

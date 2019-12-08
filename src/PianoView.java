@@ -7,8 +7,6 @@ public class PianoView extends JFrame {
     // Octave chooser and label
     protected JLabel octavePickingLabel;
     protected JSlider octavePickingSlider;
-    // Octave 0 (A0 and B0)
-    // Octave 1 (<note name><octave number>Key)
     // White keys
     protected JButton cKey;
     protected JButton dKey;
@@ -24,13 +22,6 @@ public class PianoView extends JFrame {
     protected JButton fSharpKey;
     protected JButton gSharpKey;
     protected JButton aSharpKey;
-    // Octave 2
-    // Octave 3
-    // Octave 4
-    // Octave 5
-    // Octave 6
-    // Octave 7
-    // Octave 8 (C8)
 
     public PianoView(PianoController pianoController) {
         super("JPiano");
@@ -69,11 +60,11 @@ public class PianoView extends JFrame {
         JPanel gridPane2 = new JPanel();
         GridBagLayout grid = new GridBagLayout();
         GridBagConstraints c = new GridBagConstraints();
-        cSharpKey = new JButton("C3#");
-        dSharpKey = new JButton("D3#");
-        fSharpKey = new JButton("F3#");
-        gSharpKey = new JButton("G3#");
-        aSharpKey = new JButton("A3#");
+        cSharpKey = new JButton("C4#");
+        dSharpKey = new JButton("D4#");
+        fSharpKey = new JButton("F4#");
+        gSharpKey = new JButton("G4#");
+        aSharpKey = new JButton("A4#");
 
         c.gridx=0;
         c.gridy=0;
@@ -138,29 +129,29 @@ public class PianoView extends JFrame {
 
         JPanel whitePianoKeys = new JPanel();
         whitePianoKeys.setLayout(new GridLayout(1, 8));
-        cKey = new JButton("C3");
+        cKey = new JButton("C4");
         cKey.setPreferredSize(new Dimension(70, 200));
         cKey.setBackground(Color.WHITE);
         whitePianoKeys.add(cKey);
-        dKey = new JButton("D3");
+        dKey = new JButton("D4");
         dKey.setBackground(Color.WHITE);
         whitePianoKeys.add(dKey);
-        eKey = new JButton("E3");
+        eKey = new JButton("E4");
         eKey.setBackground(Color.WHITE);
         whitePianoKeys.add(eKey);
-        fKey = new JButton("F3");
+        fKey = new JButton("F4");
         fKey.setBackground(Color.WHITE);
         whitePianoKeys.add(fKey);
-        gKey = new JButton("G3");
+        gKey = new JButton("G4");
         gKey.setBackground(Color.WHITE);
         whitePianoKeys.add(gKey);
-        aKey = new JButton("A3");
+        aKey = new JButton("A4");
         aKey.setBackground(Color.WHITE);
         whitePianoKeys.add(aKey);
-        bKey = new JButton("B3");
+        bKey = new JButton("B4");
         bKey.setBackground(Color.WHITE);
         whitePianoKeys.add(bKey);
-        cNextOctaveKey = new JButton("C4");
+        cNextOctaveKey = new JButton("C5");
         cNextOctaveKey.setBackground(Color.WHITE);
         whitePianoKeys.add(cNextOctaveKey);
 
