@@ -45,11 +45,28 @@ public class PianoController {
         }
     }
 
+    public void updateKeyLabels() {
+        pianoView.cKey.setText("C" + octave);
+        pianoView.dKey.setText("D" + octave);
+        pianoView.eKey.setText("E" + octave);
+        pianoView.fKey.setText("F" + octave);
+        pianoView.gKey.setText("G" + octave);
+        pianoView.aKey.setText("A" + octave);
+        pianoView.bKey.setText("B" + octave);
+        pianoView.cNextOctaveKey.setText("C" + (octave + 1));
+        pianoView.cSharpKey.setText("C#" + octave);
+        pianoView.dSharpKey.setText("D#" + octave);
+        pianoView.fSharpKey.setText("F#" + octave);
+        pianoView.gSharpKey.setText("G#" + octave);
+        pianoView.aSharpKey.setText("A#" + octave);
+    }
+
     // C3 -> C4 working
     public PianoController() {
         octave = openHelper.getOctave();
         this.pianoView = new PianoView(this);
         pianoView.octavePickingSlider.setValue(octave);
+        updateKeyLabels();
 
         pianoView.octavePickingSlider.addChangeListener(new ChangeListener() {
             @Override
@@ -57,19 +74,7 @@ public class PianoController {
                 JSlider source = (JSlider) e.getSource();
                 openHelper.updateOctave(source.getValue());
                 octave = openHelper.getOctave();
-                pianoView.cKey.setText("C" + octave);
-                pianoView.dKey.setText("D" + octave);
-                pianoView.eKey.setText("E" + octave);
-                pianoView.fKey.setText("F" + octave);
-                pianoView.gKey.setText("G" + octave);
-                pianoView.aKey.setText("A" + octave);
-                pianoView.bKey.setText("B" + octave);
-                pianoView.cNextOctaveKey.setText("C" + octave + 1);
-                pianoView.cSharpKey.setText("C#" + octave);
-                pianoView.dSharpKey.setText("D#" + octave);
-                pianoView.fSharpKey.setText("F#" + octave);
-                pianoView.gSharpKey.setText("G#" + octave);
-                pianoView.aSharpKey.setText("A#" + octave);
+                updateKeyLabels();
             }
         });
 

@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="07d6e046-71b1-4b25-a3c0-4b23eb98ade6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPiano.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JPiano.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/databasePiano.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databasePiano.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$11.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$12.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$14.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$4.class" afterDir="false" />
@@ -18,10 +19,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PianoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PianoModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PianoOpenHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoOpenHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PianoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

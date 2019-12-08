@@ -20,7 +20,6 @@ public class PianoOpenHelper {
     public void getConnection() {
         try {
             connection = DriverManager.getConnection(CONNECTION_URL);
-            System.out.println("Successfully connected to the database!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -81,7 +80,6 @@ public class PianoOpenHelper {
     }
 
     private boolean tableExists() {
-        // See sources
         DatabaseMetaData md = null;
         boolean hasNext = false;
         try {
