@@ -11,10 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Sound files downloaded from:
-// https://freesound.org/people/Tesabob2001/packs/12995/
+// https://freesound.org/people/Goup_1/packs/10684/?page=13#sound
 
 // Sources used to play the sound file:
 // https://alvinalexander.com/java/java-audio-example-java-au-play-sound
+// pages 13-19
 
 public class PianoController {
     public int octave;

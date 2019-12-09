@@ -43,7 +43,7 @@ public class PianoView extends JFrame {
         // Start in the middle of the piano (octave 4)
         // Highest octave is 8 (only has C8)
         // Lowest octave is 0 (only has A0 and B0)
-        octavePickingSlider = new JSlider(JSlider.HORIZONTAL, 0, 8, 4);
+        octavePickingSlider = new JSlider(JSlider.HORIZONTAL, 1, 7, 4);
         octavePickingSlider.setMajorTickSpacing(1);
         octavePickingSlider.setMinorTickSpacing(1);
         octavePickingSlider.setPaintTicks(true);
