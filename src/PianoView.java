@@ -1,7 +1,6 @@
 import jdk.internal.dynalink.support.BottomGuardingDynamicLinker;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 public class PianoView extends JFrame {
@@ -60,6 +59,7 @@ public class PianoView extends JFrame {
         JPanel blackKeysPane = new JPanel();
         JPanel gridPane1 = new JPanel();
         JPanel gridPane2 = new JPanel();
+        gridPane2.setSize(new Dimension(3000, 200));
         GridBagLayout grid = new GridBagLayout();
         GridBagConstraints c = new GridBagConstraints();
         cSharpKey = new JButton("C4#");
@@ -89,6 +89,9 @@ public class PianoView extends JFrame {
         c.insets = new Insets(0,0,0,0);
         grid.setConstraints(dSharpKey, c);
         gridPane1.add(dSharpKey);
+
+        JPanel emptyPane = new JPanel();
+        emptyPane.setPreferredSize(new Dimension(35, 200));
 
         c.gridx=0;
         c.gridy=0;
@@ -125,6 +128,9 @@ public class PianoView extends JFrame {
         grid.setConstraints(aSharpKey, c);
         gridPane2.add(aSharpKey);
 
+        JPanel emptyPane2 = new JPanel();
+        emptyPane2.setPreferredSize(new Dimension(70, 200));
+
         JPanel whitePianoKeys = new JPanel();
         whitePianoKeys.setLayout(new GridLayout(1, 8));
         cKey = new JButton("C4");
@@ -156,7 +162,9 @@ public class PianoView extends JFrame {
 
         megaPane.add(sliderPanel, BorderLayout.NORTH);
         blackKeysPane.add(gridPane1);
+        blackKeysPane.add(emptyPane);
         blackKeysPane.add(gridPane2);
+        blackKeysPane.add(emptyPane2);
         megaPane.add(blackKeysPane, BorderLayout.CENTER);
         megaPane.add(whitePianoKeys, BorderLayout.NORTH);
         getContentPane().add(megaPane);

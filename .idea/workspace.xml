@@ -4,50 +4,8 @@
     <list default="true" id="07d6e046-71b1-4b25-a3c0-4b23eb98ade6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databases/databasePiano.db" beforeDir="false" afterPath="$PROJECT_DIR$/databases/databasePiano.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/PianoView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/a#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/a#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/a3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/a3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/b3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/b3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/c#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/c#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/c3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/c3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/c4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/c4.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/d#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/d#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/d3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/d3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/e3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/e3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/f#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/f#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/f3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/f3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/g#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/g#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JPiano/g3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JPiano/g3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PianoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PianoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PianoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/a#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/a#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/a3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/a3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/b3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/b3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/c#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/c4.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/d#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/d#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/d3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/d3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/e3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/e3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/f#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/f#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/f3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/f3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/g#3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/g3.wav" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
