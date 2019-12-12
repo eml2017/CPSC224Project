@@ -1,29 +1,58 @@
-import jdk.internal.dynalink.support.BottomGuardingDynamicLinker;
+/**
+ * This program builds the piano GUI. It uses JButtons to represent the the piano keys and a
+ *      JSlider represents the octave changer.
+ *
+ * @author John Hyde and Elizabeth Larson
+ * @see https://docs.oracle.com/javase/tutorial/uiswing/layout/gridbag.html, Oracle, working with GridBagLayout
+ * @see https://docs.oracle.com/javase/7/docs/api/javax/swing/SwingConstants.html, Oracle, working with JLabel allignment
+ * @see https://www.youtube.com/watch?v=SUyh1GLQpM0, Java Swing Tutorial, changing JLabel font size
+ */
 
 import javax.swing.*;
 import java.awt.*;
 
 public class PianoView extends JFrame {
+    /** pianoController - PianoController object that gives access to GUI functionality and database storage */
     private PianoController pianoController;
-    // Octave chooser and label
+    /** octavePickingLabel - labels where the octave picking slider is */
     protected JLabel octavePickingLabel;
+    /** octavePickingSlider - slider that allows the user to choose an octave */
     protected JSlider octavePickingSlider;
-    // White keys
+    /** cKey - white key representing C keys of any octave */
     protected JButton cKey;
+    /** dKey - white key representing D keys of any octave */
     protected JButton dKey;
+    /** eKey - white key representing E keys of any octave */
     protected JButton eKey;
+    /** fKey - white key representing F keys of any octave */
     protected JButton fKey;
+    /** gKey - white key representing G keys of any octave */
     protected JButton gKey;
+    /** aKey - white key representing A keys of any octave */
     protected JButton aKey;
+    /** bKey - white key representing B keys of any octave */
     protected JButton bKey;
+    /** cNextOctaveKey - white key representing C keys of the consecutive octave */
     protected JButton cNextOctaveKey;
-    // Black keys
+    /** cSharpKey - black key representing C# keys of any octave */
     protected JButton cSharpKey;
+    /** dSharpKey - black key representing D# keys of any octave */
     protected JButton dSharpKey;
+    /** fSharpKey - black key representing F# keys of any octave */
     protected JButton fSharpKey;
+    /** gSharpKey - black key representing G# keys of any octave */
     protected JButton gSharpKey;
+    /** aSharpKey - black key representing A# keys of any octave */
     protected JButton aSharpKey;
 
+    /**
+     * Constructor for the PianoView
+     * Create a new GUI view and call a method to set up the components
+     * Executes a graceful exit when the user closes the GUI
+     *
+     * @param pianoController PianoController object that connects this view to the controller class
+     * @see "No Borrowed Code"
+     */
     public PianoView(PianoController pianoController) {
         super("JPiano");
         this.pianoController = pianoController;
@@ -34,28 +63,35 @@ public class PianoView extends JFrame {
         pack();
     }
 
+    /**
+     * Sets up the panels for the piano GUI
+     * Adds black and white keys represented as JButtons
+     * Adds a slider that allows the user to change the octave of the keys on the screen
+     *
+     * @see "https://docs.oracle.com/javase/7/docs/api/javax/swing/SwingConstants.html, Oracle, working with JLabel allignment"
+     * @see "https://www.youtube.com/watch?v=SUyh1GLQpM0, Java Swing Tutorial, changing JLabel font size"
+     */
     public void setUpPiano() {
+        // Main panel - used to organize the other mini panels
         JPanel megaPane = new JPanel();
-        //megaPane.setLayout(new BoxLayout(megaPane, BoxLayout.Y_AXIS));
 
+        // Octave slider starts in the middle of the piano (octave 4)
+        // The highest octave is 7 and the lowest octave is 1
         JPanel sliderPanel = new JPanel();
-        // Start in the middle of the piano (octave 4)
-        // Highest octave is 8 (only has C8)
-        // Lowest octave is 0 (only has A0 and B0)
         octavePickingSlider = new JSlider(JSlider.HORIZONTAL, 1, 7, 4);
         octavePickingSlider.setMajorTickSpacing(1);
         octavePickingSlider.setMinorTickSpacing(1);
         octavePickingSlider.setPaintTicks(true);
         octavePickingSlider.setPaintLabels(true);
-        // Find source for SwingConstants
         octavePickingLabel = new JLabel("Octave:   ", SwingConstants.RIGHT);
-        // Find source for label size
         octavePickingLabel.setFont(new Font("Dialog", Font.BOLD, 20));
         sliderPanel.add(octavePickingLabel);
         sliderPanel.add(octavePickingSlider);
         sliderPanel.setLayout(new GridLayout(1, 2));
 
-
+        // Set up the panels that hold the black keys
+        // gridPane1 represents the C# and D# keys
+        // gridPane2 represents the F#, G#, and A# keys
         JPanel blackKeysPane = new JPanel();
         JPanel gridPane1 = new JPanel();
         JPanel gridPane2 = new JPanel();
@@ -68,6 +104,7 @@ public class PianoView extends JFrame {
         gSharpKey = new JButton("G4#");
         aSharpKey = new JButton("A4#");
 
+        // Set up the layout for the C# Key
         c.gridx=0;
         c.gridy=0;
         c.anchor =GridBagConstraints.PAGE_END;
@@ -78,6 +115,7 @@ public class PianoView extends JFrame {
         grid.setConstraints(cSharpKey,c);
         gridPane1.add(cSharpKey);
 
+        // Set up the layout for the D# Key
         c.gridx=1;
         c.gridy=0;
         c.anchor =GridBagConstraints.PAGE_END;
@@ -90,12 +128,13 @@ public class PianoView extends JFrame {
         grid.setConstraints(dSharpKey, c);
         gridPane1.add(dSharpKey);
 
+        // Empty pane that separates the two black key panels
         JPanel emptyPane = new JPanel();
         emptyPane.setPreferredSize(new Dimension(35, 200));
 
+        // Set up the layout for the F# Key
         c.gridx=0;
         c.gridy=0;
-        //c.fill = GridBagConstraints.HORIZONTAL;
         c.anchor =GridBagConstraints.PAGE_END;
         fSharpKey.setBackground(Color.BLACK);
         fSharpKey.setForeground(Color.WHITE);
@@ -105,6 +144,7 @@ public class PianoView extends JFrame {
         grid.setConstraints(fSharpKey, c);
         gridPane2.add(fSharpKey);
 
+        // Set up the layout for the G# Key
         c.gridx=1;
         c.gridy=0;
         c.anchor =GridBagConstraints.PAGE_END;
@@ -116,9 +156,9 @@ public class PianoView extends JFrame {
         grid.setConstraints(gSharpKey, c);
         gridPane2.add(gSharpKey);
 
+        // Set up the layout for the A# Key
         c.gridx=2;
         c.gridy=0;
-        //c.fill = GridBagConstraints.HORIZONTAL;
         aSharpKey.setBackground(Color.BLACK);
         aSharpKey.setForeground(Color.WHITE);
         aSharpKey.setPreferredSize(new Dimension(70, 200));
@@ -128,9 +168,11 @@ public class PianoView extends JFrame {
         grid.setConstraints(aSharpKey, c);
         gridPane2.add(aSharpKey);
 
+        // Empty pane that pushes the two black key panels over
         JPanel emptyPane2 = new JPanel();
         emptyPane2.setPreferredSize(new Dimension(70, 200));
 
+        // Create a panel for all of the white, natural keys on the piano
         JPanel whitePianoKeys = new JPanel();
         whitePianoKeys.setLayout(new GridLayout(1, 8));
         cKey = new JButton("C4");
@@ -159,7 +201,7 @@ public class PianoView extends JFrame {
         cNextOctaveKey.setBackground(Color.WHITE);
         whitePianoKeys.add(cNextOctaveKey);
 
-
+        // Add all panels to the main panel in a way that looks like a physical piano
         megaPane.add(sliderPanel, BorderLayout.NORTH);
         blackKeysPane.add(gridPane1);
         blackKeysPane.add(emptyPane);
